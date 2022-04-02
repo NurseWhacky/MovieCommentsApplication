@@ -28,7 +28,7 @@ namespace MovieCommentsApplication.EF.Migrations
                     b.Property<string>("Comment")
                         .IsRequired()
                         .HasColumnType("longtext")
-                        .HasColumnName("comment_text");
+                        .HasColumnName("comment");
 
                     b.Property<int>("MovieId")
                         .HasColumnType("int")
@@ -40,7 +40,7 @@ namespace MovieCommentsApplication.EF.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("movie_comment", (string)null);
+                    b.ToTable("comments", (string)null);
                 });
 #pragma warning restore 612, 618
         }

@@ -10,8 +10,8 @@ using MovieCommentsApplication.EF;
 namespace MovieCommentsApplication.EF.Migrations
 {
     [DbContext(typeof(MovieCommentContext))]
-    [Migration("20220402113006_FintaMigrazione")]
-    partial class FintaMigrazione
+    [Migration("20220402215637_ModificaNomeTabellaComments")]
+    partial class ModificaNomeTabellaComments
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,7 +30,7 @@ namespace MovieCommentsApplication.EF.Migrations
                     b.Property<string>("Comment")
                         .IsRequired()
                         .HasColumnType("longtext")
-                        .HasColumnName("comment_text");
+                        .HasColumnName("comment");
 
                     b.Property<int>("MovieId")
                         .HasColumnType("int")
@@ -42,7 +42,7 @@ namespace MovieCommentsApplication.EF.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("movie_comment", (string)null);
+                    b.ToTable("comments", (string)null);
                 });
 #pragma warning restore 612, 618
         }
