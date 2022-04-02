@@ -10,6 +10,11 @@
 
         public string Comment { get; set; }
 
+        public MovieComment(int id) 
+        {
+            Id = id;
+        }
+
         public MovieComment(int id, int userId, int movieId, string comment)
         {
             Id = id;
