@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MovieCommentsApplication.Core.Exceptions;
 using MovieCommentsApplication.Core.Service;
+using MovieCommentsApplication.EF.Service;
 using MovieCommentsApplication.RestAPI.Mapper;
 using MovieCommentsApplication.RestAPI.Request;
 using MovieCommentsApplication.RestAPI.Response;
@@ -11,9 +12,10 @@ namespace MovieCommentsApplication.RestAPI.Controllers
     [Route("comments")]
     public class MovieCommentsController : ControllerBase
     {
-        private IMovieCommentRepository _repository;
+        //private IMovieCommentRepository _repository;
+        private DbService _repository;
 
-        public MovieCommentsController(IMovieCommentRepository repository)
+        public MovieCommentsController(/*IMovieCommentRepository*/ DbService repository)
         {
             _repository = repository;
         }

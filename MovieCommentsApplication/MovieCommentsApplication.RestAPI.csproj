@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MovieCommentsApplication.Core\MovieCommentsApplication.Core.csproj" />
+    <ProjectReference Include="..\MovieCommentsApplication.EF\MovieCommentsApplication.EF.csproj" />
   </ItemGroup>
 
 </Project>

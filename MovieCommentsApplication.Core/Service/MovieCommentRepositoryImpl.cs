@@ -15,7 +15,7 @@ namespace MovieCommentsApplication.Core.Service
             _movieComments = new();
         }
 
-        private int GetNextCommentId()
+        public int GetNextCommentId()
         {
             if (_movieComments.Count == 0) return MIN_ID_VALUE;
             return _movieComments.Max(c => c.Id) + 1;
@@ -23,8 +23,8 @@ namespace MovieCommentsApplication.Core.Service
 
         public MovieComment CreateComment(int userId, int movieId, string comment)
         {
-            var commentId = GetNextCommentId();
-            var newComment = new MovieComment(commentId, userId, movieId, comment);
+            //id = GetNextCommentId();
+            var newComment = new MovieComment(GetNextCommentId(), userId, movieId, comment);
             if (comment.Length < MIN_CHARACTERS) throw new InvalidCharacterNumberException(MIN_CHARACTERS);
             if (userId < MIN_ID_VALUE) throw new UserNotFoundException(userId);
             if (movieId < MIN_ID_VALUE) throw new MovieNotFoundException(movieId);

@@ -4,6 +4,8 @@ namespace MovieCommentsApplication.Core.Service
 {
     public interface IMovieCommentRepository
     {
+        int GetNextCommentId();
+
         MovieComment CreateComment(int userId, int movieId, string comment);
 
         List<MovieComment> GetAllComments();

@@ -1,4 +1,5 @@
 ﻿using MovieCommentsApplication.Core.Model;
+using MovieCommentsApplication.EF.Entities;
 using MovieCommentsApplication.RestAPI.Models;
 
 namespace MovieCommentsApplication.RestAPI.Mapper
@@ -25,5 +26,15 @@ namespace MovieCommentsApplication.RestAPI.Mapper
                 MovieId = commentDTO.MovieId
             };
         }
+
+ //       public static MovieCommentEntity FromModel(MovieComment movieComment)
+ //       {
+ //           return new()
+ //           {
+ //               UserId = movieComment.UserId,
+ //               MovieId = movieComment.MovieId,
+ //               Comment = movieComment.Comment
+ //           };
+ //       }
     }
 }
