@@ -13,7 +13,7 @@ namespace MovieCommentsApplication.EF
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=localhost;Port=3306;Database=movie_comments;Uid=root;Pwd=nondevedividere";
+            var connectionString = "Server=localhost;Port=3306;Database=movie_comments;Uid=root;Pwd=";
             var mySqlServerVersion = new MySqlServerVersion(new Version(5, 7, 24));
 
             optionsBuilder.UseMySql(connectionString, mySqlServerVersion);
